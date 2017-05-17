@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 public protocol DataConvertible {
     associatedtype Result
@@ -70,55 +71,21 @@ extension Data : DataConvertible, DataRepresentable {
     public func asData() -> Data! {
         return self
     }
-    
 }
 
-public enum JSON : DataConvertible, DataRepresentable {
+/// Dependency on SwiftyJSON
+extension JSON : DataConvertible, DataRepresentable {
     public typealias Result = JSON
     
-    case Dictionary([String:AnyObject])
-    case Array([AnyObject])
-    
     public static func convertFromData(_ data: Data) -> Result? {
-        do {
-            let object : Any = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
-            switch (object) {
-            case let dictionary as [String:AnyObject]:
-                return JSON.Dictionary(dictionary)
-            case let array as [AnyObject]:
-                return JSON.Array(array)
-            default:
-                return nil
-            }
-        } catch {
-            Logger.error(message: "Invalid JSON data", error: .invalidResponse)
-            return nil
-        }
+        return JSON(data: data)
     }
     
     public func asData() -> Data! {
-        switch (self) {
-        case .Dictionary(let dictionary):
-            return try? JSONSerialization.data(withJSONObject: dictionary, options: JSONSerialization.WritingOptions())
-        case .Array(let array):
-            return try? JSONSerialization.data(withJSONObject: array, options: JSONSerialization.WritingOptions())
-        }
-    }
-    
-    public var array : [AnyObject]! {
-        switch (self) {
-        case .Dictionary(_):
-            return nil
-        case .Array(let array):
-            return array
-        }
-    }
-    
-    public var dictionary : [String:AnyObject]! {
-        switch (self) {
-        case .Dictionary(let dictionary):
-            return dictionary
-        case .Array(_):
+        do {
+            return try self.rawData()
+        } catch {
+            Logger.error(message: "Could not convert JSON to Data.")
             return nil
         }
     }

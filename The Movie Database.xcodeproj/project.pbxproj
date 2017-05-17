@@ -26,6 +26,11 @@
 		D18B2CD01ECC8B3300E1DBD4 /* UIImageView+TMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CCF1ECC8B3300E1DBD4 /* UIImageView+TMDB.swift */; };
 		D18B2CD21ECC8BB400E1DBD4 /* DownloadImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CD11ECC8BB400E1DBD4 /* DownloadImageManager.swift */; };
 		D18B2CD51ECC8C7100E1DBD4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CD41ECC8C7100E1DBD4 /* Movie.swift */; };
+		D18B2CD71ECC926A00E1DBD4 /* String+TMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CD61ECC926A00E1DBD4 /* String+TMDB.swift */; };
+		D18B2CD91ECC981000E1DBD4 /* MovieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CD81ECC981000E1DBD4 /* MovieManager.swift */; };
+		D18B2CDC1ECCA19500E1DBD4 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CDB1ECCA19500E1DBD4 /* Layout.swift */; };
+		D18B2CDE1ECCA22900E1DBD4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CDD1ECCA22900E1DBD4 /* MovieCell.swift */; };
+		D18B2CE01ECCAC5300E1DBD4 /* Double+TMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CDF1ECCAC5300E1DBD4 /* Double+TMDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,11 @@
 		D18B2CCF1ECC8B3300E1DBD4 /* UIImageView+TMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+TMDB.swift"; sourceTree = "<group>"; };
 		D18B2CD11ECC8BB400E1DBD4 /* DownloadImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageManager.swift; sourceTree = "<group>"; };
 		D18B2CD41ECC8C7100E1DBD4 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		D18B2CD61ECC926A00E1DBD4 /* String+TMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+TMDB.swift"; sourceTree = "<group>"; };
+		D18B2CD81ECC981000E1DBD4 /* MovieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieManager.swift; sourceTree = "<group>"; };
+		D18B2CDB1ECCA19500E1DBD4 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		D18B2CDD1ECCA22900E1DBD4 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		D18B2CDF1ECCAC5300E1DBD4 /* Double+TMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+TMDB.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +153,7 @@
 		D18B2C8E1ECC874300E1DBD4 /* The Movie Database */ = {
 			isa = PBXGroup;
 			children = (
+				D18B2CDA1ECCA18800E1DBD4 /* Views */,
 				D18B2CD31ECC8BF900E1DBD4 /* Model */,
 				D18B2CBD1ECC87B000E1DBD4 /* Downloader */,
 				D18B2CCC1ECC8AB200E1DBD4 /* Extensions */,
@@ -179,10 +190,10 @@
 			children = (
 				D18B2CBE1ECC880500E1DBD4 /* DownloadManager.swift */,
 				D18B2CD11ECC8BB400E1DBD4 /* DownloadImageManager.swift */,
-				D18B2CC01ECC883500E1DBD4 /* DataConvertible.swift */,
 				D18B2CC21ECC886700E1DBD4 /* DownloadRequest.swift */,
 				D18B2CC41ECC88F600E1DBD4 /* DownloadError.swift */,
 				D18B2CCA1ECC89C000E1DBD4 /* DownloadSettings.swift */,
+				D18B2CC01ECC883500E1DBD4 /* DataConvertible.swift */,
 				D18B2CC61ECC896300E1DBD4 /* Logger.swift */,
 				D18B2CC81ECC899C00E1DBD4 /* Cache.swift */,
 			);
@@ -194,6 +205,8 @@
 			children = (
 				D18B2CCD1ECC8AC300E1DBD4 /* UIImage+TMDB.swift */,
 				D18B2CCF1ECC8B3300E1DBD4 /* UIImageView+TMDB.swift */,
+				D18B2CD61ECC926A00E1DBD4 /* String+TMDB.swift */,
+				D18B2CDF1ECCAC5300E1DBD4 /* Double+TMDB.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -202,8 +215,18 @@
 			isa = PBXGroup;
 			children = (
 				D18B2CD41ECC8C7100E1DBD4 /* Movie.swift */,
+				D18B2CD81ECC981000E1DBD4 /* MovieManager.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D18B2CDA1ECCA18800E1DBD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D18B2CDB1ECCA19500E1DBD4 /* Layout.swift */,
+				D18B2CDD1ECCA22900E1DBD4 /* MovieCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,8 +415,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D18B2C921ECC874300E1DBD4 /* ViewController.swift in Sources */,
+				D18B2CDE1ECCA22900E1DBD4 /* MovieCell.swift in Sources */,
+				D18B2CD71ECC926A00E1DBD4 /* String+TMDB.swift in Sources */,
 				D18B2CBF1ECC880500E1DBD4 /* DownloadManager.swift in Sources */,
+				D18B2CD91ECC981000E1DBD4 /* MovieManager.swift in Sources */,
 				D18B2CC91ECC899C00E1DBD4 /* Cache.swift in Sources */,
+				D18B2CDC1ECCA19500E1DBD4 /* Layout.swift in Sources */,
 				D18B2CC51ECC88F600E1DBD4 /* DownloadError.swift in Sources */,
 				D18B2C901ECC874300E1DBD4 /* AppDelegate.swift in Sources */,
 				D18B2CCB1ECC89C000E1DBD4 /* DownloadSettings.swift in Sources */,
@@ -402,6 +429,7 @@
 				D18B2CD51ECC8C7100E1DBD4 /* Movie.swift in Sources */,
 				D18B2CC71ECC896300E1DBD4 /* Logger.swift in Sources */,
 				D18B2CD01ECC8B3300E1DBD4 /* UIImageView+TMDB.swift in Sources */,
+				D18B2CE01ECCAC5300E1DBD4 /* Double+TMDB.swift in Sources */,
 				D18B2CC31ECC886700E1DBD4 /* DownloadRequest.swift in Sources */,
 				D18B2CC11ECC883500E1DBD4 /* DataConvertible.swift in Sources */,
 			);
@@ -652,6 +680,7 @@
 				D18B2CB61ECC874400E1DBD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D18B2CB71ECC874400E1DBD4 /* Build configuration list for PBXNativeTarget "The Movie DatabaseTests" */ = {
 			isa = XCConfigurationList;
@@ -660,6 +689,7 @@
 				D18B2CB91ECC874400E1DBD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D18B2CBA1ECC874400E1DBD4 /* Build configuration list for PBXNativeTarget "The Movie DatabaseUITests" */ = {
 			isa = XCConfigurationList;
@@ -668,6 +698,7 @@
 				D18B2CBC1ECC874400E1DBD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
