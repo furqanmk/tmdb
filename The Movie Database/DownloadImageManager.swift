@@ -6,4 +6,18 @@
 //  Copyright © 2017 Careem. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+public class DownloadImageManager {
+    
+    /// Shared manager used for image downloading.
+    public static var shared: DownloadManager<UIImage> {
+        guard let s = _singleton else {
+            _singleton = DownloadManager<UIImage>()
+            return _singleton!
+        }
+        return s
+    }
+    static private var _singleton: DownloadManager<UIImage>?
+    
+}

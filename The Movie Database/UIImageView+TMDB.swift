@@ -6,4 +6,14 @@
 //  Copyright © 2017 Careem. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+public extension UIImageView {
+    public func setImage(url: String) {
+        DownloadImageManager.shared.fetch(url: url, progress: nil, success: { (image) in
+            self.image = image
+        }) { (error) in
+            print(error)
+        }
+    }
+}

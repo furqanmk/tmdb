@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class DownloadSettings {
+    public static var requestTimeoutSeconds = 60.0
+    public static var maximumSimultaneousDownloads = 50
+    public static var requestCachePolicy = URLRequest.CachePolicy.useProtocolCachePolicy
+}

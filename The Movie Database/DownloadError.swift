@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+public enum DownloadError {
+    case invalidUrl
+    case invalidResponse
+    case not200
+    case other(error: Error?)
+}

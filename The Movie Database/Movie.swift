@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+class Movie {
+    var title: String
+    var overview: String
+    var released: String
+    var popularity: Double
+    var voteAvg: Int
+    var adult: Bool
+    var posterUrl: String
+    var backdropUrl: String
+    
+    init(json: ) {
+        self.title = json
+    }
+}
