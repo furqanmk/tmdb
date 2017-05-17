@@ -31,6 +31,10 @@
 		D18B2CDC1ECCA19500E1DBD4 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CDB1ECCA19500E1DBD4 /* Layout.swift */; };
 		D18B2CDE1ECCA22900E1DBD4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CDD1ECCA22900E1DBD4 /* MovieCell.swift */; };
 		D18B2CE01ECCAC5300E1DBD4 /* Double+TMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CDF1ECCAC5300E1DBD4 /* Double+TMDB.swift */; };
+		D18B2CE21ECCCDC500E1DBD4 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CE11ECCCDC500E1DBD4 /* HistoryCell.swift */; };
+		D18B2CE41ECCD25E00E1DBD4 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CE31ECCD25E00E1DBD4 /* History.swift */; };
+		D18B2CE81ECCD6FC00E1DBD4 /* SpringExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CE61ECCD6FC00E1DBD4 /* SpringExpandView.swift */; };
+		D18B2CE91ECCD6FC00E1DBD4 /* SpringRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18B2CE71ECCD6FC00E1DBD4 /* SpringRefresh.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		D18B2CDB1ECCA19500E1DBD4 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		D18B2CDD1ECCA22900E1DBD4 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		D18B2CDF1ECCAC5300E1DBD4 /* Double+TMDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+TMDB.swift"; sourceTree = "<group>"; };
+		D18B2CE11ECCCDC500E1DBD4 /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		D18B2CE31ECCD25E00E1DBD4 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		D18B2CE61ECCD6FC00E1DBD4 /* SpringExpandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringExpandView.swift; sourceTree = "<group>"; };
+		D18B2CE71ECCD6FC00E1DBD4 /* SpringRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringRefresh.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +161,7 @@
 		D18B2C8E1ECC874300E1DBD4 /* The Movie Database */ = {
 			isa = PBXGroup;
 			children = (
+				D18B2CE51ECCD6EE00E1DBD4 /* SpringRefresh */,
 				D18B2CDA1ECCA18800E1DBD4 /* Views */,
 				D18B2CD31ECC8BF900E1DBD4 /* Model */,
 				D18B2CBD1ECC87B000E1DBD4 /* Downloader */,
@@ -216,6 +225,7 @@
 			children = (
 				D18B2CD41ECC8C7100E1DBD4 /* Movie.swift */,
 				D18B2CD81ECC981000E1DBD4 /* MovieManager.swift */,
+				D18B2CE31ECCD25E00E1DBD4 /* History.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -225,8 +235,18 @@
 			children = (
 				D18B2CDB1ECCA19500E1DBD4 /* Layout.swift */,
 				D18B2CDD1ECCA22900E1DBD4 /* MovieCell.swift */,
+				D18B2CE11ECCCDC500E1DBD4 /* HistoryCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		D18B2CE51ECCD6EE00E1DBD4 /* SpringRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				D18B2CE61ECCD6FC00E1DBD4 /* SpringExpandView.swift */,
+				D18B2CE71ECCD6FC00E1DBD4 /* SpringRefresh.swift */,
+			);
+			name = SpringRefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,13 +445,17 @@
 				D18B2C901ECC874300E1DBD4 /* AppDelegate.swift in Sources */,
 				D18B2CCB1ECC89C000E1DBD4 /* DownloadSettings.swift in Sources */,
 				D18B2CCE1ECC8AC300E1DBD4 /* UIImage+TMDB.swift in Sources */,
+				D18B2CE21ECCCDC500E1DBD4 /* HistoryCell.swift in Sources */,
 				D18B2CD21ECC8BB400E1DBD4 /* DownloadImageManager.swift in Sources */,
 				D18B2CD51ECC8C7100E1DBD4 /* Movie.swift in Sources */,
+				D18B2CE41ECCD25E00E1DBD4 /* History.swift in Sources */,
 				D18B2CC71ECC896300E1DBD4 /* Logger.swift in Sources */,
 				D18B2CD01ECC8B3300E1DBD4 /* UIImageView+TMDB.swift in Sources */,
 				D18B2CE01ECCAC5300E1DBD4 /* Double+TMDB.swift in Sources */,
 				D18B2CC31ECC886700E1DBD4 /* DownloadRequest.swift in Sources */,
 				D18B2CC11ECC883500E1DBD4 /* DataConvertible.swift in Sources */,
+				D18B2CE91ECCD6FC00E1DBD4 /* SpringRefresh.swift in Sources */,
+				D18B2CE81ECCD6FC00E1DBD4 /* SpringExpandView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

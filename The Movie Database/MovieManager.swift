@@ -38,20 +38,15 @@ class MovieManager {
                 self?.list.append(movie)
             }
             self?.delegate?.didLoadMovies(noResults: movieItems.count == 0)
-            self?.addSearchHistory(string: query)
+            History.addItem(string: query)
         },
         failure: { error in
             print("Error loading movies.")
         })
     }
     
-    func searchHistory() -> [String] {
-        return UserDefaults.standard.array(forKey: "history") as? [String] ?? []
-    }
-    
-    private func addSearchHistory(string query: String) {
-        var history = searchHistory()
-        history.append(query)
-        UserDefaults.standard.setValue(history, forKey: "history")
+    func clear() {
+        list = [ ]
+        DownloadImageManager.shared.cache.clearCache()
     }
 }

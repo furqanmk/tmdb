@@ -54,6 +54,7 @@ class MovieCell: UICollectionViewCell {
         overviewLabel.alpha = delta
         releasedHeading.alpha = delta
         releasedLabel.alpha = delta
+        adultLabel.alpha = delta
     }
     
 }
